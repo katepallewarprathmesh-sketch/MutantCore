@@ -28,7 +28,7 @@ Do not present the 100% manual seed kill rate as an MCY mutation score. No equiv
 
 ## Architecture
 
-See [spec](docs/spec.md), [verification plan](docs/verification_plan.md), [toolchain pins](docs/toolchain.md), and [ADRs](docs/adr/). The adapter is RVFI (`-DRISCV_FORMAL`) and records PC/instruction/register/memory effects. The directed program covers ADDI, ADD, BNE, SW, LW, JAL and EBREAK.
+The adapter is RVFI (`-DRISCV_FORMAL`) and records PC/instruction/register/memory effects. The directed program covers ADDI, ADD, BNE, SW, LW, JAL and EBREAK.
 
 ## Remaining blueprint milestones
 

@@ -1,7 +1,7 @@
 PROJECT := MutantCore
 RTL := third_party/picorv32/picorv32.v
 TB := sim/trace_tb.sv
-.PHONY: test smoke lint iverilog-test results mutations clean pin mcy-fetch mcy-init mcy-status
+.PHONY: test smoke lint iverilog-test results mutations clean mcy-fetch mcy-init mcy-status
 
 test: smoke
 	$(MAKE) iverilog-test
@@ -29,9 +29,6 @@ mutations: smoke
 
 results: mutations
 	@echo 'See results/trace_compare.txt and results/mutation_progress.csv'
-
-pin:
-	cat docs/pin.txt
 
 mcy-fetch:
 	bash scripts/fetch_tools.sh mcy
