@@ -7,7 +7,7 @@ test: smoke
 	$(MAKE) iverilog-test
 
 smoke: lint
-	./scripts/build_firmware.sh
+	bash scripts/build_firmware.sh
 	rm -f results/dut_trace.csv
 	verilator --binary --timing --top-module trace_tb -DRISCV_FORMAL -Wno-fatal --Mdir build/obj $(RTL) $(TB)
 	./build/obj/Vtrace_tb
@@ -17,7 +17,7 @@ lint:
 	verilator --lint-only --timing --top-module trace_tb -DRISCV_FORMAL -Wno-fatal $(RTL) $(TB)
 
 iverilog-test:
-	./scripts/build_firmware.sh
+	bash scripts/build_firmware.sh
 	iverilog -g2012 -DRISCV_FORMAL -s trace_tb -o build/iverilog.vvp $(RTL) $(TB)
 	vvp build/iverilog.vvp
 	cp results/dut_trace.csv results/dut_trace_icarus.csv
@@ -33,7 +33,7 @@ pin:
 	cat docs/pin.txt
 
 mcy-fetch:
-	./scripts/fetch_tools.sh mcy
+	bash scripts/fetch_tools.sh mcy
 
 mcy-init: mcy-fetch
 	cd flow/mcy && python3 ../../tools/mcy/mcy.py init

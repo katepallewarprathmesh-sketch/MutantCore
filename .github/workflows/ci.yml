@@ -8,6 +8,6 @@ jobs:
       - name: Install toolchain
         run: |
           sudo apt-get update
-          sudo apt-get install -y verilator gcc-riscv64-unknown-elf binutils-riscv64-unknown-elf
+          sudo apt-get install -y verilator iverilog gcc-riscv64-unknown-elf binutils-riscv64-unknown-elf
       - name: Run smoke and seeded mutants
         run: make test mutations
