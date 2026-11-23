@@ -8,6 +8,7 @@ test: smoke
 
 smoke: lint
 	bash scripts/build_firmware.sh
+	mkdir -p build/obj
 	rm -f results/dut_trace.csv
 	verilator --binary --timing --top-module trace_tb -DRISCV_FORMAL -Wno-fatal --Mdir build/obj $(RTL) $(TB)
 	./build/obj/Vtrace_tb
