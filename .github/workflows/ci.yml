@@ -9,5 +9,17 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y verilator iverilog gcc-riscv64-unknown-elf binutils-riscv64-unknown-elf
-      - name: Run smoke and seeded mutants
-        run: make test mutations
+      - name: Show tool versions
+        run: |
+          verilator --version
+          iverilog -V | head -1
+          riscv64-unknown-elf-gcc --version | head -1
+          python3 --version
+      - name: Lint
+        run: make lint
+      - name: Verilator baseline smoke
+        run: make smoke
+      - name: Icarus baseline smoke
+        run: make iverilog-test
+      - name: Manually seeded fault checks
+        run: python3 scripts/run_seed_mutations.py
