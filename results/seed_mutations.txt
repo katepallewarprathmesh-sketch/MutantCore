@@ -1,0 +1,5 @@
+Manually seeded fault-detection experiment (not MCY-generated):
+alu_add_to_sub: KILLED (golden trace mismatch)
+decode_addi_funct3: KILLED (golden trace mismatch)
+branch_bne_inverted: KILLED (golden trace mismatch)
+Equivalent mutants: not classified; this experiment is a fixed seed set, not a mutation campaign.

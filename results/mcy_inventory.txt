@@ -1,0 +1,4 @@
+MCY candidate-import smoke, MCY source commit 5a2cad0cbefceb7f23051c08348bd23128fd1046, Yosys 0.52.
+Generated candidate mutations: 12.
+Current MCY tag state: PENDING (all 12). No simulation/equivalence tests were configured or run; this is not a kill count and no mutation score is reported.
+Reproduce candidate import from flow/mcy with: python3 ../../tools/mcy/mcy.py init

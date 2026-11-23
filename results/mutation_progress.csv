@@ -1,0 +1,2 @@
+stage,total_seeded,killed,survived,equivalent,seed_kill_rate_pct,scope
+directed_smoke_manual_seeds,3,3,0,not_classified,100.0,"manual ALU, decode, branch substitutions; not MCY mutation score"

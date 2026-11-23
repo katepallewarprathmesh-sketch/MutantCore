@@ -1,0 +1,1 @@
+PASS: 8 RVFI retirement records match directed golden trace; ADD/branch/store/load effects verified. This is not a Spike comparison.

@@ -1,0 +1,15 @@
+# Generated software/simulation artifacts
+/build/
+obj_dir/
+firmware/*.elf
+firmware/*.bin
+firmware/*.hex
+results/*.vcd
+results/*.fst
+**/__pycache__/
+**/*.pyc
+# Fetched third-party tool checkouts and generated MCY state
+tools/mcy/
+tools/riscv-isa-sim/
+flow/mcy/database/
+flow/mcy/tasks/

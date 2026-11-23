@@ -1,0 +1,16 @@
+[options]
+size 12
+tags PENDING
+
+[script]
+read_verilog picorv32.v
+prep -top picorv32
+
+[files]
+picorv32.v
+
+[logic]
+tag("PENDING")
+
+[report]
+print("Candidate mutations generated; no test classification configured.")
